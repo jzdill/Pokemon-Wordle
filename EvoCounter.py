@@ -37,7 +37,7 @@ for l in fMain:
     saved = False
     #get user input
     while num < 1 or num > 3:
-        str = "How many stages are in {}\'s evolution chain? Megas don't count. Answers are 1-3. (Type 'save' to save your progress & quit.) \n\n\n\n\n\n\n\n\n\n\n"
+        str = "How many stages are in {}\'s evolution chain? Megas don't count. Answers are 1-3. (Type 'save' to save your progress & quit.) \n\n"
         inp = input(str.format(name))
 
         #save & quit
@@ -60,7 +60,7 @@ for l in fMain:
 
     s = l[:-1] + ',{}\n'
     fTemp.write(s.format(num))
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n\n")
     
 savePokedex(fMain,fTemp)
 print("You finished!")

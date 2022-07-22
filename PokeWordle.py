@@ -59,6 +59,7 @@ while not done:
         s = 'The answer was {}.'
         print(s.format(answer.name))
         if input("Type 'Yes' to play again! ").capitalize() == 'Yes':
+            print('\n\n\n')
             answer = random.choice(list(pokedex.values()))
             turn = 1
             continue
@@ -68,11 +69,13 @@ while not done:
         guess = pokedex[inp.title()]
     except:
         print("Pokemon not found.")
+        turn -= 1
         continue
     
     if guess == answer: 
         print("You Win!")
         if input("Type 'Yes' to play again! ").capitalize() == 'Yes':
+            print('\n\n\n')
             answer = random.choice(list(pokedex.values()))
             turn = 1
             continue
@@ -87,10 +90,10 @@ while not done:
 
     if guess.numEvos == answer.numEvos:
         s = "The answer has a {} evolution chain."
-        print(s.format(guess.numEvos))
+        print(s.format(guess.numEvos[:-1]))
     else:
         s = "The answer does not have a {} evolution chain."
-        print(s.format(guess.numEvos))
+        print(s.format(guess.numEvos[:-1]))
 
     if guess.bst == answer.bst:
         s = "The answer has the same BST as {}"
