@@ -1,5 +1,6 @@
 import random
 
+
 class Pokemon:
     def __init__(self,dexNum,name,types,gen,numEvos,bst,abilities,):
         self.dexNum = dexNum
