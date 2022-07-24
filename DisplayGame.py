@@ -16,7 +16,6 @@ def evenSpacing(n, size):
 # stats = current guess
 guessList = []
 answer = randomPokemon()
-print(answer.name)
 def submitAnswer(event = None): # 'event = None' allows both the button & the Enter key to submit
 	global gameOver
 	if gameOver:
@@ -173,4 +172,3 @@ for i in range(0,len(headerLabels)):
 
 
 root.mainloop()
-

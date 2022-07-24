@@ -64,5 +64,3 @@ for l in fMain:
     
 savePokedex(fMain,fTemp)
 print("You finished!")
-
-    
