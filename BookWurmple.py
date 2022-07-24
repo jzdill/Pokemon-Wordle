@@ -1,5 +1,21 @@
 import random
 
+def randomPokemon():
+    return random.choice(list(pokedex.values()))
+
+def getPokemon(str):
+    try: return pokedex[str.upper()]
+    except: return None
+
+# check for pokemon that contain str (ex. 'king' in Kingdra)
+# return list if len <= 10
+def spellCheck(str):
+    ret = []
+    for p in pokedex:
+        if str.upper() in p:
+            ret.append(p)
+        if len(ret) > 10: return []
+    return ret
 
 class Pokemon:
     def __init__(self,dexNum,name,types,gen,numEvos,bst,abilities,):
@@ -29,7 +45,7 @@ for l in f:
     for t in types:
         if t == '': types.remove(t)
     abilities = line[5:8]
-    try: numEvos = line[9]
+    try: numEvos = line[9][:-1] #trim the \n char
     except: numEvos = 0
     #remove blank abilties, has to loop twice bc of pokemon w/ only 1 ability
     for a in abilities:
@@ -37,13 +53,13 @@ for l in f:
     for a in abilities:
         if a == '': abilities.remove(a)
     newPoke = Pokemon(line[0],name,types,line[2],numEvos,line[8],abilities)
-    pokedex[name] = newPoke
+    pokedex[name.upper()] = newPoke
 f.close()
+
+""" ------------------- CODE TO RUN TEXT VERSION OF THE GAME -------------------
 
 #select the secret pokemon
 answer = random.choice(list(pokedex.values()))
-while len(answer.types) > 1: answer = random.choice(list(pokedex.values()))
-print(answer.name)
 
 #run the game
 done = False
@@ -67,7 +83,7 @@ while not done:
         else: break
 
     try:
-        guess = pokedex[inp.title()]
+        guess = pokedex[inp.upper()]
     except:
         print("Pokemon not found.")
         turn -= 1
@@ -91,10 +107,10 @@ while not done:
 
     if guess.numEvos == answer.numEvos:
         s = "The answer has a {} evolution chain."
-        print(s.format(guess.numEvos[:-1]))
+        print(s.format(guess.numEvos))
     else:
         s = "The answer does not have a {} evolution chain."
-        print(s.format(guess.numEvos[:-1]))
+        print(s.format(guess.numEvos))
 
     if guess.bst == answer.bst:
         s = "The answer has the same BST as {}"
@@ -128,3 +144,4 @@ while not done:
     else:
         s = "The answer only shares one type with {}."
         print(s.format(guess.name))
+"""
