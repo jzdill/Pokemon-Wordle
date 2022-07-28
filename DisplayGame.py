@@ -8,7 +8,7 @@ BACKGROUND_COLOR = '#919191'
 BST_BACKGROUND_COLOR = '#4287f5'
 gameOver = False
 
-#evenly spaced w/ 0.1 on either side
+#evenly spaced w/ 0.1 on either sided
 def evenSpacing(n, size):
 	ret = 0.8 * (n / (size-1)) + 0.1
 	return  ret
@@ -118,7 +118,7 @@ def submitAnswer(event = None): # 'event = None' allows both the button & the En
 		guessEntry.config(state = 'disabled')
 
 	if len(guessList) == 7:
-		lblWinLose.config(text = 'You Lose!')
+		lblWinLose.config(text = 'You Lose! The answer was ' + answer.name)
 		gameOver = True
 		guessEntry.config(state = 'disabled')
 
