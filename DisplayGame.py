@@ -175,6 +175,7 @@ lblPokedex = None
 def openPokedex():
 	global pokedexRoot
 	global lblPokedex
+	global possibilities
 	if pokedexRoot != None: return
 	pokedexRoot = Tk()
 	pokedexRoot.title("Pokedex")
@@ -183,6 +184,10 @@ def openPokedex():
 	pokedexRoot.protocol("WM_DELETE_WINDOW", closePokedex)
 
 	lblPokedex = Label(pokedexRoot, bg = BACKGROUND_COLOR, wraplength = 500, justify = CENTER)
+	str = ''
+	for p in possibilities:
+		str += p.name + ', '
+	lblPokedex.config(text = str[:-2])
 	lblPokedex.pack(side = 'top')
 
 #reset variable to indicate pokedex window was closed

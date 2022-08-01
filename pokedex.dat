@@ -31,7 +31,6 @@
 23,Ekans,1,Poison,,Intimidate,Shed Skin,Unnerve,288,2
 24,Arbok,1,Poison,,Intimidate,Shed Skin,Unnerve,448,2
 25,Pikachu,1,Electric,,Static,,Lightning Rod,320,3
-25,Partner Pikachu,1,Electric,,,,Lightning Rod,320,3
 26,Raichu,1,Electric,,Static,,Lightning Rod,485,3
 26,Alolan Raichu,1,Electric,Psychic,Surge Surfer,,,485,3
 27,Sandshrew,1,Ground,,Sand Veil,,Sand Rush,300,2
@@ -168,7 +167,6 @@
 131,Lapras,1,Water,Ice,Water Absorb,Shell Armor,Hydration,535,1
 132,Ditto,1,Normal,,Limber,,Imposter,288,1
 133,Eevee,1,Normal,,Run Away,Adaptability,Anticipation,325,2
-133,Partner Eevee,1,Normal,,,,Anticipation,435,2
 134,Vaporeon,1,Water,,Water Absorb,,Hydration,525,2
 135,Jolteon,1,Electric,,Volt Absorb,,Quick Feet,525,2
 136,Flareon,1,Fire,,Flash Fire,,Guts,525,2
@@ -458,10 +456,7 @@
 384,Rayquaza,3,Dragon,Flying,Air Lock,,,680,1
 384,Mega Rayquaza,3,Dragon,Flying,Delta Stream,,,780,1
 385,Jirachi,3,Steel,Psychic,Serene Grace,,,600,1
-386,Deoxys Normal Forme,3,Psychic,,Pressure,,,600,1
-386,Deoxys Attack Forme,3,Psychic,,Pressure,,,600,1
-386,Deoxys Defense Forme,3,Psychic,,Pressure,,,600,1
-386,Deoxys Speed Forme,3,Psychic,,Pressure,,,600,1
+386,Deoxys,3,Psychic,,Pressure,,,600,1
 387,Turtwig,4,Grass,,Overgrow,,Shell Armor,318,3
 388,Grotle,4,Grass,,Overgrow,,Shell Armor,405,3
 389,Torterra,4,Grass,Ground,Overgrow,,Shell Armor,525,3
@@ -749,8 +744,7 @@
 646,Kyurem,5,Dragon,Ice,Pressure,,,660,1
 646,Black Kyurem,5,Dragon,Ice,Teravolt,,,700,1
 646,White Kyurem,5,Dragon,Ice,Turboblaze,,,700,1
-647,Keldeo Ordinary Forme,5,Water,Fighting,Justified,,,580,1
-647,Keldeo Resolute Forme,5,Water,Fighting,Justified,,,580,1
+647,Keldeo,5,Water,Fighting,Justified,,,580,1
 648,Meloetta Aria Forme,5,Normal,Psychic,Serene Grace,,,600,1
 648,Meloetta Pirouette Forme,5,Normal,Fighting,Serene Grace,,,600,1
 649,Genesect,5,Bug,Steel,Download,,,600,1
@@ -787,8 +781,7 @@
 678,Meowstic Female,6,Psychic,,Keen Eye,Infiltrator,Competitive,466,2
 679,Honedge,6,Steel,Ghost,No Guard,,,325,3
 680,Doublade,6,Steel,Ghost,No Guard,,,448,3
-681,Aegislash Blade Forme,6,Steel,Ghost,Stance Change,,,520,3
-681,Aegislash Shield Forme,6,Steel,Ghost,Stance Change,,,520,3
+681,Aegislash,6,Steel,Ghost,Stance Change,,,520,3
 682,Spritzee,6,Fairy,,Healer,,Aroma Veil,341,2
 683,Aromatisse,6,Fairy,,Healer,,Aroma Veil,462,2
 684,Swirlix,6,Fairy,,Sweet Veil,,Unburden,341,2
@@ -830,8 +823,8 @@
 718,Zygarde Complete Forme,6,Dragon,Ground,Power Construct,,,708,1
 719,Diancie,6,Rock,Fairy,Clear Body,,,600,1
 719,Mega Diancie,6,Rock,Fairy,Magic Bounce,,,700,1
-720,Hoopa Hoopa Confined,6,Psychic,Ghost,Magician,,,600,1
-720,Hoopa Hoopa Unbound,6,Psychic,Dark,Magician,,,680,1
+720,Hoopa Confined Form,6,Psychic,Ghost,Magician,,,600,1
+720,Hoopa Unbound Form,6,Psychic,Dark,Magician,,,680,1
 721,Volcanion,6,Fire,Water,Water Absorb,,,600,1
 722,Rowlet,7,Grass,Flying,Overgrow,,Long Reach,320,3
 723,Dartrix,7,Grass,Flying,Overgrow,,Long Reach,420,3
@@ -859,7 +852,6 @@
 742,Cutiefly,7,Bug,Fairy,Honey Gather,Shield Dust,Sweet Veil,304,2
 743,Ribombee,7,Bug,Fairy,Honey Gather,Shield Dust,Sweet Veil,464,2
 744,Rockruff,7,Rock,,Keen Eye,Vital Spirit,Steadfast,280,2
-744,Own Tempo Rockruff,7,Rock,,Own Tempo,,,280,2
 745,Lycanroc Midday Form,7,Rock,,Keen Eye,Sand Rush,Steadfast,487,2
 745,Lycanroc Midnight Form,7,Rock,,Keen Eye,Vital Spirit,No Guard,487,2
 745,Lycanroc Dusk Form,7,Rock,,Tough Claws,,,487,2
@@ -998,12 +990,10 @@
 872,Snom,8,Ice,Bug,Shield Dust,,Ice Scales,185,2
 873,Frosmoth,8,Ice,Bug,Shield Dust,,Ice Scales,475,2
 874,Stonjourner,8,Rock,,Power Spot,,,470,1
-875,Eiscue Ice Face,8,Ice,,Ice Face,,,470,1
-875,Eiscue Noice Face,8,Ice,,Ice Face,,,470,1
+875,Eiscue,8,Ice,,Ice Face,,,470,1
 876,Indeedee Male,8,Psychic,Normal,Inner Focus,Synchronize,Psychic Surge,475,1
 876,Indeedee Female,8,Psychic,Normal,Own Tempo,Synchronize,Psychic Surge,475,1
-877,Morpeko Full Belly Mode,8,Electric,Dark,Hunger Switch,,,436,1
-877,Morpeko Hangry Mode,8,Electric,Dark,Hunger Switch,,,436,1
+877,Morpeko,8,Electric,Dark,Hunger Switch,,,436,1
 878,Cufant,8,Steel,,Sheer Force,,Heavy Metal,330,2
 879,Copperajah,8,Steel,,Sheer Force,,Heavy Metal,500,2
 880,Dracozolt,8,Electric,Dragon,Volt Absorb,Hustle,Sand Rush,505,1
@@ -1019,7 +1009,7 @@
 889,Zamazenta Crowned Shield,8,Fighting,Steel,Dauntless Shield,,,720,1
 889,Zamazenta Hero of Many Battles,8,Fighting,,Dauntless Shield,,,670,1
 890,Eternatus,8,Poison,Dragon,Pressure,,,690,1
-890,Eternatus Eternamax,8,Poison,Dragon,,,,1125,1
+890,Eternatus Eternamax,8,Poison,Dragon,Pressure,,,1125,1
 79,Galarian Slowpoke,1,Psychic,,Gluttony,Own Tempo,Regenerator,315,2
 80,Galarian Slowbro,1,Poison,Psychic,Quick Draw,Own Tempo,Regenerator,490,2
 144,Galarian Articuno,1,Psychic,Flying,Competitive,,,580,1

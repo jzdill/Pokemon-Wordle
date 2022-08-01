@@ -48,6 +48,8 @@ for l in f:
     #remove blank types
     for t in types:
         if t == '': types.remove(t)
+    if name == 'Rockruff':
+        types.append('Own Tempo') #Rockruff is the only Pokemon w/ 4 abilities
     abilities = line[5:8]
     try: numEvos = line[9][:-1] #trim the \n char
     except: numEvos = 0
