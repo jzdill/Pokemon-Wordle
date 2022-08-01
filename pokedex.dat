@@ -31,7 +31,7 @@
 23,Ekans,1,Poison,,Intimidate,Shed Skin,Unnerve,288,2
 24,Arbok,1,Poison,,Intimidate,Shed Skin,Unnerve,448,2
 25,Pikachu,1,Electric,,Static,,Lightning Rod,320,3
-25,Partner Pikachu,1,Electric,,,,Lightning Rod,430,3
+25,Partner Pikachu,1,Electric,,,,Lightning Rod,320,3
 26,Raichu,1,Electric,,Static,,Lightning Rod,485,3
 26,Alolan Raichu,1,Electric,Psychic,Surge Surfer,,,485,3
 27,Sandshrew,1,Ground,,Sand Veil,,Sand Rush,300,2
@@ -237,8 +237,8 @@
 195,Quagsire,2,Water,Ground,Damp,Water Absorb,Unaware,430,2
 196,Espeon,2,Psychic,,Synchronize,,Magic Bounce,525,2
 197,Umbreon,2,Dark,,Synchronize,,Inner Focus,525,2
-198,Murkrow,2,Water,Psychic,Oblivious,Own Tempo,Regenerator,490,2
-199,Slowking,2,2.0,79.5,Regenerator,490.0,95.0,75,2
+198,Murkrow,2,Dark,Flying,Insomnia,Super Luck,Prankster,405,2
+199,Slowking,2,Water,Psychic,Oblivious,Own Tempo,Regenerator,490,2
 200,Misdreavus,2,Ghost,,Levitate,,,435,2
 201,Unown,2,Psychic,,Levitate,,,336,1
 202,Wobbuffet,2,Psychic,,Shadow Tag,,Telepathy,405,2
@@ -817,14 +817,8 @@
 707,Klefki,6,Steel,Fairy,Prankster,,Magician,470,1
 708,Phantump,6,Ghost,Grass,Natural Cure,Frisk,Harvest,309,2
 709,Trevenant,6,Ghost,Grass,Natural Cure,Frisk,Harvest,474,2
-710,Pumpkaboo Average Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,335,2
-710,Pumpkaboo Small Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,335,2
-710,Pumpkaboo Large Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,335,2
-710,Pumpkaboo Super Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,335,2
-711,Gourgeist Average Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,494,2
-711,Gourgeist Small Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,494,2
-711,Gourgeist Large Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,494,2
-711,Gourgeist Super Size,6,Ghost,Grass,Pickup,Frisk,Insomnia,494,2
+710,Pumpkaboo,6,Ghost,Grass,Pickup,Frisk,Insomnia,335,2
+711,Gourgeist,6,Ghost,Grass,Pickup,Frisk,Insomnia,494,2
 712,Bergmite,6,Ice,,Own Tempo,Ice Body,Sturdy,304,2
 713,Avalugg,6,Ice,,Own Tempo,Ice Body,Sturdy,514,2
 714,Noibat,6,Flying,Dragon,Frisk,Infiltrator,Telepathy,245,2

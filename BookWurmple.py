@@ -17,6 +17,10 @@ def spellCheck(str):
         if len(ret) > 10: return []
     return ret
 
+# returns list of all pokemon
+def getAllPokemon():
+    return list(pokedex.values())
+
 class Pokemon:
     def __init__(self,dexNum,name,types,gen,numEvos,bst,abilities,):
         self.dexNum = dexNum
