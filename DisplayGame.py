@@ -1,6 +1,9 @@
+#TODO add header commments
+
 from tkinter import *
 from turtle import pos
 from BookWurmple import *
+from PIL import Image, ImageTk
 
 WRONG_COLOR = '#565656'
 PARTIAL_COLOR = '#f5c131'
@@ -71,18 +74,18 @@ def submitAnswer(event = None): # 'event = None' allows both the button & the En
 	sharedAbilities = list(set(guess.abilities) & set(answer.abilities))
 	if len(sharedAbilities) == 0:
 		colors[4] = WRONG_COLOR
-	elif len(sharedAbilities) > 0 and len(sharedAbilities) != len(answer.abilities):
-		colors[4] = PARTIAL_COLOR
-	else:
+	elif len(sharedAbilities) == len(answer.abilities) == len(guess.abilities):
 		colors[4] = RIGHT_COLOR
+	else:
+		colors[4] = PARTIAL_COLOR
 
 	if guess.bst == answer.bst:
 		colors[5] = RIGHT_COLOR
 	else:
 		colors[5] = BST_BACKGROUND_COLOR
 
-	# set label text values
-	name = guess.name.replace(' ','\n')
+	# set label values
+	sprite = ImageTk.PhotoImage(Image.open(getSprite(guess.name)))
 	types = ''
 	for t in guess.types:
 		types += t + '\n'
@@ -110,13 +113,15 @@ def submitAnswer(event = None): # 'event = None' allows both the button & the En
 	ht = 7  # this is as small as the squares can be & still fit all ability names
 	wd = 14
 	guessLabels = [
-	Label(root, text=name, bg=colors[0], height=ht, width=wd),
+	Label(root, image=sprite, bg=colors[0], height = 107, width=100), #ht/wd bc images size differently than text
 	Label(root, text=types, bg=colors[1], height=ht, width=wd),
 	Label(root, text=gen, bg=colors[2], height=ht, width=wd),
 	Label(root, text=numEvos, bg=colors[3], height=ht, width=wd),
 	Label(root, text=abilities, bg=colors[4], height=ht, width=wd),
 	Label(root, text=bst, bg=colors[5], height=ht, width=wd)
 	]
+	guessLabels[0].image = sprite
+
 	guessEntry.delete(0,END)
 	guessList.insert(0,guessLabels)
 	for i in range(0,len(guessLabels)):
@@ -236,7 +241,7 @@ def possFilter(p):
 	if len(sharedAbilities) == 0:
 		if len(set(p.abilities) & set(guess.abilities)) > 0:
 			return False
-	elif len(sharedAbilities) > 0 and len(sharedAbilities) != len(answer.abilities):
+	elif len(sharedAbilities) > 0 and ( len(sharedAbilities) != len(answer.abilities) or len(sharedAbilities) != len(guess.abilities) ):
 		abilPossIntersect = set(p.abilities) & set(guess.abilities)
 		if len(abilPossIntersect) == 0 or len(abilPossIntersect) == len(guess.abilities):
 			return False
@@ -283,7 +288,7 @@ lblSuggest.place(rely = .9, relx = .25, anchor = 'n')
 root.bind('<Return>',submitAnswer)
 
 headerLabels = [
-	Label(root, text = 'Name', bg=BACKGROUND_COLOR),
+	Label(root, text = 'Pokemon', bg=BACKGROUND_COLOR),
 	Label(root, text = 'Types', bg=BACKGROUND_COLOR),
 	Label(root, text = 'Generation', bg=BACKGROUND_COLOR),
 	Label(root, text = 'Evolution Line', bg=BACKGROUND_COLOR),

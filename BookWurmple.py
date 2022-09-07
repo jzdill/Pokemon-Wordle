@@ -35,6 +35,79 @@ class Pokemon:
         ret = "{}: {} & {}"
         return ret.format(self.name,self.types[0],self.types[1])
 
+#returns filename for given pokemon name. returns None if no file found
+def getSprite(n):
+    fname = './sprites/' + imageFileName(n) + '.png'
+    try: 
+        file = open(fname)
+        file.close()
+        return fname
+    except: 
+        print(fname + ' not found')
+        return None
+
+#format name to find .png
+def imageFileName(n):
+    name = n.lower()
+    name = name.replace('.','')
+    name = name.replace('\'','')
+    name = name.replace(':','')
+    name = name.replace('%','')
+    name = name.replace(' ','-')
+
+    if 'mega-' in name:
+        if 'charizard' in name or 'mewtwo' in name:
+            name = name[5:-2] + '-mega' + name[-2:]
+        else:
+            name = name.partition('mega-')[2] + '-mega'
+    if 'alolan-' in name:
+        name = name[7:] + '-alola'
+    if 'galarian-' in name and 'darmanitan' not in name:
+        name = name[9:] + '-galar'
+    if 'hisuian-' in name:
+        name = name[8:] + '-hisui'
+    if '-form' in name:
+        name = name.partition('-form')[0]
+    if 'primal-' in name:
+        name = name.partition('-')[2] + '-primal'
+    if 'incarnate' in name:
+        name = name.partition('-incarnate')[0]
+    if 'urshifu' in name:
+        name = 'urshifu'
+    if 'hero-of' in name:
+        name = name.partition('-')[0]
+    if '-crowned' in name:
+        name = name.partition('-')[0] + '-crowned'
+    if '-necrozma' in name:
+        name = 'necrozma-' + name.partition('-')[0]
+    if 'minior-m' in name:
+        name = 'minior'
+    if 'minior-c' in name:
+        name = 'minior-blue'
+    if 'oricorio' in name:
+        name = name.partition('-style')[0]
+    if name == 'ash-greninja':
+        name = 'greninja-ash'
+    if '-kyurem' in name:
+        name = 'kyurem-' + name.partition('-kyurem')[0]
+    if 'darmanitan' in name:
+        n = 'darmanitan'
+        if 'galar' in name: n += '-galar'
+        if 'zen' in name: n += '-zen'
+        name = n
+    if '-rotom' in name:
+        name = 'rotom-' + name.partition('-')[0]
+    if 'wormadam-' in name:
+        name = name.partition('-cloak')[0]
+
+    return name
+
+#check that sprite files exist for every pokemon
+def checkSprites():
+    for p in pokedex:
+        f = getSprite(p)
+    print("All sprites checked.")
+
 #data is formatted as:
 #dexNum,name,gen,type1,type2,ability1,ability2,ability3,bst,numEvos
 f = open('pokedex.dat')
