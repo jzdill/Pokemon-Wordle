@@ -173,7 +173,6 @@ def resetGame():
 	bstCeiling = 1000
 	guessEntry.config(state = 'normal')
 	lblWinLose.config(text = '')
-	answer = getPokemon("Sunkern")
 
 pokedexRoot = None
 lblPokedex = None
