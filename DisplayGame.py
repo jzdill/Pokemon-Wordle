@@ -173,6 +173,7 @@ def resetGame():
 	bstCeiling = 1000
 	guessEntry.config(state = 'normal')
 	lblWinLose.config(text = '')
+	closePokedex()
 
 pokedexRoot = None
 lblPokedex = None
