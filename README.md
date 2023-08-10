@@ -1,5 +1,5 @@
 # Pokemon-Wordle
-It's pokemon wordle!
+It's Pokemon Wordle!
 
 To play, run DisplayGame.py
 
