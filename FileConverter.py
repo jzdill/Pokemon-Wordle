@@ -1,3 +1,5 @@
+# Reads from pokedata.dat - trims unneeded info and formats appropriately
+# Outputs to pokedex.dat
 import os
 
 class Pokemon:

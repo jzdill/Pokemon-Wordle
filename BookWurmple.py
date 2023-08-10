@@ -1,8 +1,12 @@
+# Various functions for running the game
+
 import random
 
+# chooses a random pokemon
 def randomPokemon():
     return random.choice(list(pokedex.values()))
 
+# uses pokemon name to get data from pokedex
 def getPokemon(str):
     try: return pokedex[str.upper()]
     except: return None
@@ -121,9 +125,9 @@ for l in f:
     #remove blank types
     for t in types:
         if t == '': types.remove(t)
-    if name == 'Rockruff':
-        types.append('Own Tempo') #Rockruff is the only Pokemon w/ 4 abilities
     abilities = line[5:8]
+    if name == 'Rockruff':
+        abilities.append('Own Tempo') #Rockruff is the only Pokemon w/ 4 abilities
     try: numEvos = line[9][:-1] #trim the \n char
     except: numEvos = 0
     #remove blank abilties, has to loop twice bc of pokemon w/ only 1 ability
@@ -135,7 +139,7 @@ for l in f:
     pokedex[name.upper()] = newPoke
 f.close()
 
-""" ------------------- CODE TO RUN TEXT VERSION OF THE GAME -------------------
+""" ------------------- CODE TO RUN TEXT-ONLY VERSION OF THE GAME -------------------
 
 #select the secret pokemon
 answer = random.choice(list(pokedex.values()))

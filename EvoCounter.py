@@ -1,7 +1,10 @@
+# [This file should not be run any more, all evolutions have been entered]
+# Method to manually enter number of evolutions into the pokedex (data was not present in pokedata.dat)
+# Formats data appropriately, when finished saves to pokedexFinal.dat
 import os
 import shutil
 
-
+# saves pokedex to temp file if still in-progress, otherwise saves to pokedexFinal.dat
 def savePokedex(fMain, fTemp):
     for l in fMain:
         fTemp.write(l)

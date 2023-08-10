@@ -21,7 +21,7 @@ guessList = []
 possibilities = getAllPokemon() #possible answers based on guesses so far, starts as all
 answer = randomPokemon()
 guess = None
-bstCeiling = 9999 #bounds for determining possible answers
+bstCeiling = 2000 #bounds for determining possible answers
 bstFloor = 0 
 def submitAnswer(event = None): # 'event = None' allows both the button & the Enter key to submit
 	global gameOver
@@ -173,6 +173,7 @@ def resetGame():
 	bstCeiling = 1000
 	guessEntry.config(state = 'normal')
 	lblWinLose.config(text = '')
+	answer = getPokemon("Sunkern")
 
 pokedexRoot = None
 lblPokedex = None
@@ -250,13 +251,11 @@ def possFilter(p):
 			return False
 
 	#bst
-	global bstFloor, bstCeiling #bounds
-	if guess.bst == answer.bst:
-		if p.bst != guess.bst:
-			return False
-	if guess.bst < answer.bst and p.bst < guess.bst:
+	if guess.bst == answer.bst and p.bst != guess.bst:
 		return False
-	elif guess.bst > answer.bst and p.bst > guess.bst:
+	if int(guess.bst) < int(answer.bst) and int(p.bst) < int(guess.bst):
+		return False
+	elif int(guess.bst) > int(answer.bst) and int(p.bst) > int(guess.bst):
 		return False
 
 	return True
