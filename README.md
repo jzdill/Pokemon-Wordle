@@ -1,4 +1,6 @@
 # Pokemon-Wordle
+## Requires Pillow: https://pypi.org/project/Pillow/
+
 It's Pokemon Wordle!
 
 To play, run DisplayGame.py
